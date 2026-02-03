@@ -4,6 +4,12 @@ systemctl daemon-reload || true
 /bin/hciconfig hci0 down || true
 sed -i 's/AutoEnable=true/AutoEnable=false/g' /etc/bluetooth/main.conf || true
 /bin/bluetoothctl power on || true
+btmgmt --index 0 power off || true
+systemctl stop avahi-daemon || true
+systemctl stop bluetooth || true
+systemctl stop avahi-daemon.socket || true
+systemctl disable avahi-daemon || true
+systemctl disable bluetooth || true
 systemctl start soma-connect.service || true
 systemctl restart rsyslog || true
 crontab /etc/soma-connect-crontab.conf || true
