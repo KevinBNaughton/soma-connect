@@ -3,7 +3,9 @@
 Creating a debian / ubuntu package for soma-connect 2.3.2 for use on my
 raspberry pi 5
 
-## Zip file
+## Get files from the source zip file
+
+The files in this repo are from the original Soma downloaded zip file.
 
 I split up the zip file provided by SOMA into `files/` by running:
 
