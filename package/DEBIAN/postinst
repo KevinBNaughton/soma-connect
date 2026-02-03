@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+systemctl daemon-reload || true
+/bin/hciconfig hci0 down || true
+sed -i 's/AutoEnable=true/AutoEnable=false/g' /etc/bluetooth/main.conf || true
+/bin/bluetoothctl power on || true
+systemctl start soma-connect.service || true
+systemctl restart rsyslog || true
+crontab /etc/soma-connect-crontab.conf || true

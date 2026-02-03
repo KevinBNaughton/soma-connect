@@ -1,0 +1,10 @@
+Package: soma-connect
+Version: 2.3.2
+Section: base
+Priority: optional
+Architecture: any
+Depends: bluez, rsyslog
+Maintainer: SOMA <support@somasmarthome.com>
+Uploaders: KevinBNaughton <kevinbnaughton@gmail.com>
+Changed-By: KevinBNaughton <kevinbnaughton@gmail.com>
+Description: SOMA Connect
